@@ -27,7 +27,7 @@ List initialize (List L){
     }
     for (int i = 0; i < MAX; i++)
     {
-        printf ("%d, ", temp);
+        printf ("%d, ", L.elem[i]);
     }
     
     L.count = 0;
