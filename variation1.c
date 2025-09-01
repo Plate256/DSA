@@ -13,6 +13,6 @@ int Locate (List L, int data);
 List insertSorted (List L, int data);
 void Display (List L);
 int main (){
-printf ("test");
-printf ("AMBOT");
+
 };
+List initialize (List L);
