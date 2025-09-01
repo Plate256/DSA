@@ -15,4 +15,14 @@ void Display (List L);
 int main (){
 
 };
-List initialize (List L);
+List initialize (List L){
+    List temp = L;
+    return temp;
+};
+List insertPos (List L, int data, int position){
+for (int i = 0; i < count; i++)
+{
+    /* code */
+}
+
+};
