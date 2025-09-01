@@ -18,15 +18,22 @@ initialize (L);
 insertPos (L, 5, 5);
 };
 List initialize (List L){
+    printf ("Pls insert a number:");
+    for (int i = 0; i < MAX; i++)
+    {
+        printf ("[%d], ", MAX - 1);
+    L.elem[MAX] =
+    }
     L.count = 0;
     return L;
 };
 List insertPos (List L, int data, int position){
-for (int i = MAX; i < data; i--)
+for (int i = MAX - 1; i > 0; i--)
 {
-    if (data != position)
+    printf ("%d ", L.elem[i]);
+    if (L.elem == NULL)
     {
-        /* code */
+        break;
     }
     
 }
