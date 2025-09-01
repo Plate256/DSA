@@ -16,6 +16,7 @@ int main (){
 List L;
 L = initialize (L);
 insertPos (L,500,5);
+deletePos (L,5);
 };
 List initialize (List L){
         int temp = 0;
@@ -31,6 +32,12 @@ List initialize (List L){
     return L;
 };
 List insertPos (List L, int data, int position){
+    if (position > MAX || position < 0)
+    {
+        printf ("\ninvalid position");
+        return L;
+    }
+    
 for (int i = MAX; i >= position; i--)
 {
     L.elem[i + 1] = L.elem[i];
@@ -47,4 +54,11 @@ for (int i = 0; i < MAX; i++)
     {
         printf ("%d, ", L.elem[i]);
     }
+}
+List deletePos (List L, int position){
+    for (int i = MAX; i > position; i--)
+{
+    L.elem[i - 1] = L.elem[i];
+}
+    Display (L);
 }
