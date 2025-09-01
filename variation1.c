@@ -15,15 +15,21 @@ void Display (List L);
 int main (){
 List L;
 initialize (L);
-insertPos (L, 5, 5);
 };
 List initialize (List L){
+    int temp = 0;
     printf ("Pls insert a number:");
     for (int i = 0; i < MAX; i++)
     {
-        printf ("[%d], ", MAX - 1);
-    L.elem[MAX] =
+        printf ("[%d]: ", i + 1);
+        scanf ("%d", &temp);
+    L.elem[i] = temp;
     }
+    for (int i = 0; i < MAX; i++)
+    {
+        printf ("%d, ", temp);
+    }
+    
     L.count = 0;
     return L;
 };
