@@ -15,9 +15,10 @@ void Display (List L);
 int main (){
 List L;
 initialize (L);
+insertPos (L, 500, 5);
 };
 List initialize (List L){
-    int temp = 0;
+        int temp = 0;
     printf ("Pls insert a number:");
     for (int i = 0; i < MAX; i++)
     {
@@ -34,13 +35,9 @@ List initialize (List L){
     return L;
 };
 List insertPos (List L, int data, int position){
-for (int i = MAX - 1; i > 0; i--)
+for (int i = MAX; i > 0; i--)
 {
-    printf ("%d ", L.elem[i]);
-    if (L.elem == NULL)
-    {
-        break;
-    }
+    L->elem(i) = L->elem(i + 1);
     
 }
 
