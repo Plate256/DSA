@@ -13,16 +13,22 @@ int Locate (List L, int data);
 List insertSorted (List L, int data);
 void Display (List L);
 int main (){
-
+List L;
+initialize (L);
+insertPos (L, 5, 5);
 };
 List initialize (List L){
-    List temp = L;
-    return temp;
+    L.count = 0;
+    return L;
 };
 List insertPos (List L, int data, int position){
-for (int i = 0; i < count; i++)
+for (int i = MAX; i < data; i--)
 {
-    /* code */
+    if (data != position)
+    {
+        /* code */
+    }
+    
 }
 
 };
