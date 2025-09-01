@@ -14,8 +14,8 @@ List insertSorted (List L, int data);
 void Display (List L);
 int main (){
 List L;
-initialize (L);
-insertPos (L, 500, 5);
+L = initialize (L);
+insertPos (L,500,5);
 };
 List initialize (List L){
         int temp = 0;
@@ -26,19 +26,25 @@ List initialize (List L){
         scanf ("%d", &temp);
     L.elem[i] = temp;
     }
-    for (int i = 0; i < MAX; i++)
-    {
-        printf ("%d, ", L.elem[i]);
-    }
-    
     L.count = 0;
+     Display (L);
     return L;
 };
 List insertPos (List L, int data, int position){
-for (int i = MAX; i > 0; i--)
+for (int i = MAX; i >= position; i--)
 {
-    L->elem(i) = L->elem(i + 1);
-    
+    L.elem[i + 1] = L.elem[i];
 }
-
+L.elem[position] = data;
+    Display (L);
+    return L;
 };
+
+
+void Display (List L){
+    printf ("\n");
+for (int i = 0; i < MAX; i++)
+    {
+        printf ("%d, ", L.elem[i]);
+    }
+}
