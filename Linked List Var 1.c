@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-typedef struct
+typedef struct node
 {
  int data;
  struct node *next;
@@ -27,9 +27,22 @@ int main (){
 
 }
 
-List* Initialize();
+List* Initialize(){
+    List *L1;
+L1 = malloc(sizeof(List));
+
+if (L1 == NULL){
+    printf ("WA NIGANAAA !!!");
+    return NULL;
+}
+L1->head = NULL;
+L1->count = 0;
+    return L1;
+}
 void empty (List *list);
-void insertFirst(List *list, int data);
+void insertFirst(List *list, int data){
+    Initialize;
+};
 void insertLast(List *list, int data);
 void insertPos (List *list, int data, int index);
 void deleteStart(List *list);
