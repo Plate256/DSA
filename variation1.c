@@ -47,7 +47,9 @@ L.elem[position] = data;
     return L;
 };
 
-
+List deletePos (List L, int position){
+    
+}
 
 
 void Display (List L){
