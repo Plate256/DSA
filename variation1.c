@@ -48,6 +48,8 @@ L.elem[position] = data;
 };
 
 
+
+
 void Display (List L){
     printf ("\n");
 for (int i = 0; i < MAX; i++)
