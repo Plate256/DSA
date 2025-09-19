@@ -65,7 +65,7 @@ List deletePos (List L, int position){
         return L;
     }
     for (int i = position; i < L.count - 1; i++){// i++ is traversal to the right. Starting from the given position, it will re iterate until position is going to be greater than count.
-        L.elem[i] = L.elem[i + 1];// left traversal. current is going to be the next.
+        L.elem[i] = L.elem[i + 1];// left traversal. next is going to be the current.
     }
 L.count--;
     Display (L);
@@ -87,7 +87,7 @@ List insertSorted (List L, int data){
     }
     for (int i = L.count; i >= pos; i--)
     {
-        L.elem[i + 1] = L.elem[i];
+        L.elem[i + 1] = L.elem[i];//right traversal
     }
     L.elem[pos] = data;
     L.count ++;
