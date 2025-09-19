@@ -71,5 +71,14 @@ L.count--;
     Display (L);
     return L;
 }
-int Locate (List L, int data);
+int Locate (List L, int data){
+    int Locate (List L, int data){
+    for (int i = 0; i < L.count; i++ ){
+        if (data == L.elem[i]){
+            return i;
+        }
+    }
+    return -1;
+}
+}
 List insertSorted (List L, int data);
