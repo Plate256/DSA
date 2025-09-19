@@ -71,7 +71,6 @@ L.count--;
     Display (L);
     return L;
 }
-int Locate (List L, int data){
     int Locate (List L, int data){
     for (int i = 0; i < L.count; i++ ){
         if (data == L.elem[i]){
@@ -80,5 +79,20 @@ int Locate (List L, int data){
     }
     return -1;
 }
+List insertSorted (List L, int data){
+    int pos = 0;
+    while (pos < L.count && L.elem[pos] < data) //iterate until the proper position is found. as long as count is still greater than pos it will iterate. as long as elem with pos as its index is less than data, it pos will increment.
+    {
+        pos++;
+    }
+    for (int i = L.count; i >= pos; i--)
+    {
+        L.elem[i + 1] = L.elem[i];
+    }
+    L.elem[pos] = data;
+    L.count ++;
+    Display(L);
+    return L;
+    
+    
 }
-List insertSorted (List L, int data);
