@@ -16,29 +16,29 @@ int main (){
 List L;
 L = initialize (L);
 L = insertPos (L,500,0);
-L = insertPos (L,250,8);
-L = insertPos (L,2250,5);
-};
+}
 List initialize (List L){
     L.count = 0;
     return L;
 };
 List insertPos (List L, int data, int position){
-    if (L.count > MAX || position < 0)
-    {
-        printf ("\ninvalid position");
-        return L;
-    }
-    for (int i = MAX; i >= position; i--){
-        L.elem[i + 1] = L.elem[i];
-    }
-
-    
-
-    L.elem[position] = data;
-L.count++;
-    Display (L);
+ if (position < L.count || position < 0){
+    printf ("Invalid Position");
     return L;
+ }
+ if (L.count == MAX){
+    printf ("List is Full");
+    return L;
+ }
+ for (int i = L.count - 1; i <= position; i++)
+ {
+    L.elem[i + 1] = L.elem[i];
+ }
+ 
+L.elem[position] = data;
+ L.count++;
+ return L;
+ 
 };
 
 void Display (List L){
