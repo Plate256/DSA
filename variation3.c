@@ -97,6 +97,7 @@ List resize(List L){
     for (int i = 0; i < L.count; i++){
         newArray[i] = L.elemPtr[i];
     }
+    free (L.elemPtr);
     L.max = newMax;
     L.elemPtr = newArray;
     return L;
