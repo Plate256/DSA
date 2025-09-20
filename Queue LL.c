@@ -22,7 +22,11 @@ int front(Queue* q);
 void display(Queue* q);
 
 int main (){
-
+    Queue *q = initialize();
+    enqueue(q, 5);
+    enqueue(q, 15);
+    enqueue(q, 25);
+    dequeue(q);
 }
 
 Queue* initialize(){
@@ -42,18 +46,17 @@ bool isEmpty(Queue* q){
     return false;
 }
 void enqueue(Queue* q, int value){
-    Node *newNode = malloc (sizeof(Queue));
+    Node *newNode = malloc(sizeof(Node));
     newNode->data = value;
     newNode->next = NULL;
-    if (isEmpty(q))
-    {
-        q->front = newNode;
+    if (isEmpty(q)){
         q->rear = newNode;
-    }else
-    {
+        q->front = newNode;
+    }else{
         q->rear->next = newNode;
         q->rear = newNode;
     }
+    display(q);
 }
 int dequeue(Queue* q){
     if (isEmpty(q))
@@ -63,11 +66,12 @@ int dequeue(Queue* q){
     }
     Node *temp = q->front;
     int value = temp->data;
-    q->front = q->front->next;
     if (isEmpty(q)){
         q->rear == NULL;
     }
+    q->front = q->front->next;
     free (temp);
+    display(q);
     return value;
 }
 int front(Queue* q);
