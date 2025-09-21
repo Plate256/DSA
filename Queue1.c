@@ -71,6 +71,7 @@ int dequeue(Queue* q){
         printf ("Queue is Empty\n");
         return -1;
     }
+    int val = q->list.items[q->front];
     if (isFull(q)){
         q->rear = -1;
         q->front = -1;
@@ -78,6 +79,7 @@ int dequeue(Queue* q){
       q->front = (q->front + 1) % MAX;  
     }
     q->list.count--;
+    return val;
     display(q);
 }
 int front(Queue* q);
